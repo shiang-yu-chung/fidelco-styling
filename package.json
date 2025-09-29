@@ -1,0 +1,13 @@
+{
+  "name": "my-sass-project",
+  "version": "1.0.0",
+  "description": "Compile Sass to CSS using NPM",
+  "scripts": {
+    "sass": "node build-sass.js watch",
+    "build:css": "node build-sass.js expanded",
+    "build:css:min": "node build-sass.js compressed"
+  },
+  "devDependencies": {
+    "sass": "^1.80.3"
+  }
+}

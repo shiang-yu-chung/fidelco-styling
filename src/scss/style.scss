@@ -1,0 +1,13 @@
+@use 'variables';
+@use 'mixins';
+
+body {
+  font-family: $font-stack;
+  background-color: $primary-color;
+  color: white;
+
+  h1 {
+    @include flex-center;
+    font-size: 2rem;
+  }
+}
