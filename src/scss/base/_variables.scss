@@ -1,0 +1,58 @@
+:root {
+/* Fonts */
+--font-main:			"Lato",sans-serif;
+--font-serif:			"Playfair Display",serif;
+/* Colors - Primary */
+--color-primary-1:      #530033; // Magenta
+--color-primary-2:      #883634; // Fidelco Red
+--color-primary-3:      #D2BAB9; // Fidelco Red 80
+--color-primary-4:      #010431; // Fidelco Blue Dark
+--color-primary-5:      #0C1255; // Fidelco Blue
+--color-primary-6:      #7A83EA; // Fidelco Blue Light
+--color-primary-7:      #D0D2E7; // Fidelco Blue Grey
+--color-primary-8:      #EFF0FF; // Fidelco Blue Off-White
+/* Colors - Accent */
+--color-accent-1:       #7A83EA; // Accent Purple
+--color-accent-2:       #277BD5; // Accent Blue
+--color-accent-3:       #43B5AF; // Accent Green
+--color-accent-4:       #DBB147; // Accent Yellow
+--color-accent-5:       #C5854A; // Accent Orange
+/* Colors - Shades */
+--color-white:          #FFFFFF;
+--color-black:			#000000;
+--color-text:           #222222; // color
+--color-grey-dark:		#333333; // Dark Grey
+--color-grey:			#606369; // Grey
+--color-grey-cool-60:	#BCC2CF; // Grey Cool 60
+--color-grey-cool-50:	#D1D5DE; // Grey Cool 50
+--color-grey-cool-40:	#E1E4E9; // Grey Cool 40
+--color-grey-cool-30:	#EEF0F3; // Grey Cool 30
+--color-grey-cool-20:	#F8F8FA; // Grey Cool 20
+/* Colors - Links */
+--color-link: 			var(--color-primary-2);
+--color-link-hover: 	var(--color-primary-1);
+--color-link-active: 	var(--color-primary-2);
+/* Calc Sizes */
+--calc-min-size:		480;
+--calc-min-size-px:		480px;
+--calc-max-size:		1800;
+/* Spacing */
+--spacing-lg: 			60px;
+--spacing-md: 			40px;
+--spacing-sm:			20px;
+--spacing-xs:			10px;
+/* Misc */
+--transition-brand:		all .25s ease-out;
+--shadow-1: 			0px 2px 8px 0px rgba(0, 0, 0, 0.25);
+--shadow-2:				0px 4px 16px 0px rgba(0, 0, 0, 0.34);
+--border-radius-lg:		24px;
+--border-radius-md:		16px;
+--border-radius-sm:		8px;
+}
+// Screen Sizes
+$screen-lg:             1440px;
+$screen-md:             1200px;
+$screen-sm:             820px;
+$screen-xs:             480px;
+$screen-xxs:		    360px;
+

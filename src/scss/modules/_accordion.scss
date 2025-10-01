@@ -1,0 +1,78 @@
+/******** ACCORDION ********/
+/*** Style 1 ***/
+.accordion-style-1 {
+  .pp-accordion {
+    border-radius: var(--border-radius-md);
+    background: var(--color-white);
+    box-shadow: var(--shadow-1);
+    padding: 0 1px;
+    .pp-accordion-item {
+      &:first-child .pp-accordion-button {
+        border-top-left-radius: var(--border-radius-md);
+        border-top-right-radius: var(--border-radius-md);
+      }
+      &:last-child .pp-accordion-button,
+      &:last-child .pp-accordion-content {
+        border-bottom-left-radius: var(--border-radius-md);
+        border-bottom-right-radius: var(--border-radius-md);
+      }
+      &.pp-accordion-item-active:last-child .pp-accordion-button {
+        border-radius: 0;
+      }
+    }
+  }
+  .pp-accordion-item {
+    .pp-accordion-button-icon {
+      font-size: 27px;
+      margin-top: 2px;
+      //color: green;
+      &.pp-accordion-icon-left {
+        padding-right: 10px;
+      }
+    }
+    .pp-accordion-button {
+      transition: var(--transition-brand);
+      padding: 16px 24px;
+      background: #fff;
+      border-bottom: 1px solid var(--color-primary-7);
+      color: var(--color-primary-4);
+      .pp-accordion-button-label {
+        font-family: var(--font-main);
+        font-weight: 800;
+        font-size: 18px;
+        line-height: 1.4;
+        padding-right: 20px;
+      }
+    }
+    .pp-accordion-button:hover {
+      background: var(--color-grey-cool-30);
+    }
+    .pp-accordion-button:active,
+    .pp-accordion-button:focus,
+    &.pp-accordion-item-active .pp-accordion-button {
+      background: var(--color-primary-5);
+      border-bottom-color: black;
+      * {color: #fff;}
+    }
+    .pp-accordion-content {
+      padding: 16px 24px;
+      background: var(--color-grey-cool-30);
+      border: 0;
+    }
+    // Mobile
+    @media only screen and (max-width: $screen-sm) {
+      .pp-accordion-button-icon {
+        //font-size: 18px;
+      }
+      .pp-accordion-button {
+        //padding: 16px 0 !important;
+        .pp-accordion-button-label {
+          //font-size: 17px;
+        }
+      }
+      .pp-accordion-content {
+        //padding: 12px 20px;
+      }
+    }
+  }
+}

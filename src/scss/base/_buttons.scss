@@ -1,0 +1,124 @@
+/*********  BUTTONS  *********/
+/*** Reset ***/
+body {
+  input[type="submit"], input[type="button"], button, a.fl-button, a.pp-button, .fl-button, .wp-block-button__link, .pp-modal-button .pp-modal-trigger {
+    display:inline-block;
+    white-space:normal;
+    line-height:1;
+    vertical-align: middle;
+    position: relative;
+    //text-align:center;
+    transition: var(--transition-brand);
+    //text-decoration: none !important;
+    //box-shadow: none;
+    letter-spacing: 0.4px;
+  }
+}
+// Primary/Default Button Mixin
+@mixin button-primary {
+  font-size: 14px;
+  font-weight: bold;
+  font-family: var(--font-main);
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 16px 24px;
+  border-radius: var(--border-radius-lg);
+  color: #fff;
+  border: 2px solid var(--color-link);
+  background-color: var(--color-link);
+  i, .fas {
+    font-size: 105%;
+    &.fl-button-icon-before {margin: -1px 6px 0 0;}
+    &.fl-button-icon-after {margin: -1px 0 0 5px;}
+  }
+  &:hover {
+    text-decoration: underline;
+    color: #fff;
+    border-color: var(--color-link-hover);
+    background-color: var(--color-link-hover);
+  }
+  &:focus, &:active {
+    color: #fff;
+    border-color: var(--color-link-active);
+    background-color: var(--color-link-active);
+    text-decoration: none !important;
+  }
+  @media only screen and (max-width: $screen-md){padding: 12px 20px;}
+  @media only screen and (max-width: $screen-sm){padding: 8px 16px;}
+}
+// Secondary Button Mixin
+@mixin button-secondary {
+  color: var(--color-primary-4);
+  border-color: var(--color-accent-2);
+  background-color: #fff;
+  * {
+    color: var(--color-primary-4);
+  }
+  &:hover {
+    * {
+      color: #fff;
+    }
+    color: #fff;
+    border-color: var(--color-accent-2);
+    background-color: var(--color-accent-2);
+  }
+  &:focus, &:active {
+    * {
+      color: #fff;
+    }
+    color: #fff;
+    border-color: var(--color-primary-4);
+    background-color: var(--color-primary-4);
+  }
+}
+// Default Applied
+body {
+  // Editor
+  .fl-module-bbwp-rich-text a.fl-button,
+  .fl-rich-text a.fl-button,
+  .pp-tabs-panel-content > div a.fl-button,
+  .pp-accordion-content > div a.fl-button,
+  .pp-member-description a.fl-button,
+  .pp-sub-heading a.fl-button,
+  div.fl-module .pp-heading-content .pp-sub-heading a.fl-button,
+  .wp-block-button .wp-block-button__link,
+  // Modules
+  .button-group-style-1 a.fl-button,
+  .modal-style-1 .pp-modal-button a.pp-modal-trigger,
+  .gform_wrapper .button,
+  .pp-modal-content-inner .fl-button,
+  .pp-offcanvas-content .fl-button
+   {
+    @include button-primary;
+  }
+}
+/*** Secondary Button ***/
+body .fl-page {
+  a.fl-button.secondary-button, .secondary-button a.fl-button {
+    @include button-secondary;
+  }
+}
+/*** Global Button Group Styles ***/
+.fl-builder-content .button-group-style-1 {
+  .fl-button-group-buttons {
+    row-gap: 20px;
+    display: flex;
+  }
+  .fl-button-group-layout-horizontal .fl-button-left {
+    padding-right: 20px;
+  }
+  .fl-button-group-layout-horizontal .fl-button-center {
+    padding: 0 10px;
+  }
+  .fl-button-group-layout-horizontal .fl-button-right {
+    padding-left: 20px;
+  }
+  .fl-button-group-layout-vertical .fl-button-group-buttons {
+    flex-direction: column;
+  }
+}
+/*** Button Group Style 1 ***/
+.button-group-style-1 {
+
+}
+

@@ -1,0 +1,118 @@
+/******** TABS ********/
+.tabs-style-1 {
+  --tab-text-color: blue;
+  --tab-bg-color: #efefef;
+  --tab-border-color: blue;
+  --tab-text-color-hover: green;
+  --tab-bg-color-hover: green;
+  --tab-border-color-hover: green;
+  --tab-text-color-active: #fff;
+  --tab-bg-color-active: red;
+  --tab-border-color-active: red;
+  .pp-tabs.pp-tabs-default {
+    .pp-tabs-labels {
+      display: flex;
+      justify-content: center;
+      flex-wrap: nowrap;
+      .pp-tabs-label {
+        transition: var(--transition-brand);
+        top: auto !important;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border:0;
+        padding: 15px;
+        margin: 0 4px;
+        color: var(--tab-text-color);
+        background: var(--tab-bg-color);
+        border-color: var(--tab-border-color);
+        .pp-tab-label-inner {
+          white-space: normal;
+          position: static;
+        }
+        .pp-tab-label-flex {
+          justify-content: center;
+        }
+        .pp-tab-title {
+          font-family: var(--font-main);
+          font-weight: 700;
+          font-size: 19px;
+          line-height: 1.4;
+        }
+        .pp-tab-icon {
+          margin-bottom: 4px !important;
+        }
+        &:hover, &:focus {
+          color: var(--tab-text-color-hover);
+          background: var(--tab-bg-color-hover);
+          border-color: var(--tab-border-color-hover);
+        }
+        &.pp-tab-active {
+          color: var(--tab-text-color-active);
+          background: var(--tab-bg-color-active);
+          border-color: var(--tab-border-color-active);
+        }
+      }
+    }
+    .pp-tab-description {
+      margin-top: 4px;
+      font-size: 15px;
+    }
+    .pp-tabs-panel-content {
+      padding: 40px;
+      @media only screen and (min-width: $screen-sm) {
+        border: 1px solid rgba(0,0,0,0.07);
+        border-top-width: 2px;
+      }
+    }
+  } 
+}
+/* Mobile Styles*/
+.tabs-style-1 {
+  @media only screen and (max-width: $screen-sm) {
+    .pp-tabs-default .pp-tabs-label .pp-tab-label-inner {
+      white-space: normal;
+    }
+    .pp-tabs-horizontal .pp-tabs-label.pp-tabs-panel-label {
+      padding: 10px !important;
+      //border-bottom: 2.5px solid rgba(0,0,0,0.15) !important;
+      background: var(--tab-bg-color);
+      border-color: var(--tab-border-color) !important;
+    }
+    .pp-tabs .pp-tab-title {
+      font-family: var(--font-main);
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 1.3;
+    }
+    .pp-tabs-panel-label .pp-toggle-icon {
+      color: var(--tab-text-color);
+      font-size: 13px;
+      border: 0;
+      padding: 5px;
+      max-height: 24px;
+      line-height: 1;
+    }
+    .pp-tabs.pp-tabs-default .pp-tabs-panel-content {
+      padding: 15px;
+    }
+    .pp-tabs-default .pp-tabs-label .pp-tab-label-inner {
+      display: flex;
+      flex-direction: row !important;
+    }
+    .pp-tabs .pp-tabs-label {
+      &.pp-tab-active, &:focus {
+        border-bottom: 0;
+        background: var(--tab-bg-color-active);
+        border-color: var(--tab-border-color-active);
+      }
+    }
+    .pp-tabs .pp-tabs-label.pp-tab-active .pp-tab-title,
+    .pp-tabs .pp-tabs-label:focus .pp-tab-title,
+    .pp-tabs .pp-tabs-label.pp-tab-active .pp-toggle-icon ,
+    .pp-tabs .pp-tabs-label:focus .pp-toggle-icon  {
+      color: var(--tab-text-color-active);
+    }
+  }
+}

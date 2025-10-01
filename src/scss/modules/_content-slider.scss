@@ -1,0 +1,29 @@
+/*****  CONTENT SLIDER  *****/
+/*** default ***/
+.content-slider-style-default {
+	// Mobile
+	@media only screen and (max-width: $screen-sm) {
+		.fl-content-slider, .fl-slide, .bx-viewport, .fl-slide-content, .fl-slide-content-wrap {
+		  min-height: 10px !important;
+		  //height: auto !important;
+		}
+		.fl-slide-mobile-photo {
+		  display: none;
+		}
+		.fl-content-slider .fl-slide-bg-photo {
+		  aspect-ratio: 16/8;
+		}
+		.fl-content-slider-navigation {
+			width: calc(100% + 36px);
+			left: -18px;
+		}
+        .fl-slide .fl-slide-content {
+          padding: 30px 20px;
+        }
+		.fl-module-content-slider .fl-slide .fl-slide-text,
+		.fl-module-content-slider .fl-slide .fl-slide-text * {
+			font-size: 16px;
+			line-height: 1.5;
+		}
+	}
+}

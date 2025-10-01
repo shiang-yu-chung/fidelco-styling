@@ -1,0 +1,20 @@
+/********* PAGE HEADERS *********/
+/*** Gradient Overlay ***/
+.page-header-grad-overlay {
+  @media only screen and (max-width: $screen-sm) {
+    overflow: hidden;
+    > .fl-row-content-wrap {
+      &:after {
+      //inset: auto auto 0 50%;
+      //translate: -50%;
+      height: 200%;
+      width: 150%;
+      }
+    }
+  }
+  &.right-aligned > .fl-row-content-wrap:after {
+    left: auto;
+  }
+}
+/*** Style 1 ***/
+.page-header-1 {}

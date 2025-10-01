@@ -1,0 +1,86 @@
+/*********  MODULE STYLE FIXES  *********/
+@import "module-fixes/accordion.scss";
+@import "module-fixes/advanced-menu.scss";
+@import "module-fixes/alert.scss";
+@import "module-fixes/annoucement-bar.scss";
+@import "module-fixes/breadcrumbs.scss";
+@import "module-fixes/button.scss";
+//@import "module-fixes/content-grid.scss";
+@import "module-fixes/content-slider.scss";
+//@import "module-fixes/events-grid.scss";
+@import "module-fixes/gravity-forms.scss";
+//@import "module-fixes/how-to.scss";
+//@import "module-fixes/instagram-feed.scss";
+@import "module-fixes/logo-carousel.scss";
+@import "module-fixes/modal.scss";
+@import "module-fixes/photo-gallery.scss";
+@import "module-fixes/posts.scss";
+//@import "module-fixes/posts-timeline.scss";
+//@import "module-fixes/pricing-table.scss";
+@import "module-fixes/search.scss";
+@import "module-fixes/social-menu.scss";
+@import "module-fixes/social-share.scss";
+@import "module-fixes/table.scss";
+@import "module-fixes/tabs.scss";
+//@import "module-fixes/team.scss";
+@import "module-fixes/video-gallery.scss";
+//@import "module-fixes/weather.scss";
+//@import "module-fixes/xxxxxxxxx.scss";
+//@import "module-fixes/xxxxxxxxx.scss";
+//@import "module-fixes/xxxxxxxxx.scss";
+/***   Add Missing Animation ***/
+a, .bbi-nav-social .bbi-nav li a .fa, .pp-modal-trigger-icon, .pp-icon, .pp-infobox * {
+	transition: var(--transition-brand);
+}
+body .fancybox-container .fancybox-navigation button.fancybox-button {
+  padding: 0;
+  border: 0 !important;
+}
+/***  Dot Nav ***/
+.bx-wrapper .bx-pager.bx-default-pager a {
+  width: 20px;
+  height: 20px;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+/**** Owl Carousel ***/
+div.pp-content-post-carousel .owl-carousel {
+  width: auto;
+}
+.pp-content-post-carousel .owl-theme .owl-dots .owl-dot {
+  background: none !important;
+}
+/*** Smart Heading ***/
+body .fl-page, .pp-modal-content-inner {
+  .pp-heading-content .pp-heading .heading-title span.pp-secondary-title p {margin: 0;}
+}
+/*** Calendar ***/
+body .tribe-events .tribe-events-l-container {padding: 0!important;}
+/*** Single Event ***/
+.single-tribe_events {
+  .tribe-events-cal-links,
+  .tribe-events-button.tribe-events-gcal {
+    margin: 0;
+  }
+  .tribe-events-button.tribe-events-gcal {
+    font-weight: bold;
+  }
+}
+body .tribe-events-c-subscribe-dropdown {
+    margin: 0 !important;
+}
+.tribe-events-venue-map > div, .tribe-events-venue-map > iframe {
+  max-height: none !important;
+}
+/***  WP Classes ***/
+.wp-caption.alignnone {
+  margin-bottom: 0;
+}
+@media only screen and (max-width: $screen-sm) {
+  .alignright, .alignleft  {
+    float: none !important;
+    margin: 0 0 20px !important;
+    display: block !important;
+  }
+}

@@ -1,0 +1,38 @@
+/***** BACKGROUNDS *****/
+/**** Tiles ****/
+.bg-tile {
+  // BG 1
+  &-1 > .fl-row-content-wrap {
+    background-size: 100% auto;
+  }
+}
+/**** Overlay Gradient Mobile ****/
+.bg-overlay-mobile {
+  @media only screen and (max-width: $screen-sm) {
+    overflow: hidden;
+    > .fl-row-content-wrap {
+      &:after {
+        top: auto;
+        height: 200%;
+        background: rgba(0,0,0,0.6);
+      }
+    }
+  }
+}
+/*** BG Image blend ***/
+.bg-image-blend-1 {
+  > .fl-row-content-wrap,
+  > .fl-col-content {
+    background-blend-mode: hard-light;
+    &:before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      inset: auto auto 0 0;
+      position: absolute;
+      z-index: 0;
+      background-color: inherit;
+      mix-blend-mode: color;
+    }
+  }
+}

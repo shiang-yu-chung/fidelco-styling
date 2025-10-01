@@ -1,0 +1,33 @@
+/***** ANIMATIONS *****/
+/*** Animation Test 1 ***/
+.anime-test-1 .animate-module {
+  @supports (animation-timeline: view()) {
+    transition: var(--transition-brand);
+    scale: 0.5;
+    opacity: 0.1;
+    animation: imageshow linear forwards;
+    animation-timeline: view();
+    //animation-range: 250px contain;
+    animation-range: entry;
+  }
+
+}
+@keyframes imageshow {
+  to {scale: 1; opacity: 1;}
+}
+
+html:not(.fl-builder-edit) .element {
+  opacity: 1 !important;
+  visibility: visible !important;
+  .fl-builder-shape-layer svg {
+    transition: all 0.8s ease-out;
+    opacity: 0;
+  }
+  .fl-builder-top-edge-layer svg {
+    transform: scale(0.80);
+  }
+  &.fl-animated .fl-builder-top-edge-layer svg {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

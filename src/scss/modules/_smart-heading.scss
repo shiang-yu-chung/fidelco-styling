@@ -1,0 +1,29 @@
+/******** SMART HEADING ********/
+/*** Smart Heading Default Style ***/
+.heading-default-style {
+  .pp-heading-content {
+    .heading-title:not(.text-inline-block) .pp-secondary-title {
+      margin-bottom: 0 !important;
+      font-size: 75% !important;
+    }
+  }
+}
+/*** Section Heading ***/
+.section-heading {
+  .pp-heading-content {
+    .heading-title {
+      font-size: clamp(28px, 4vw, 46px);
+      .pp-primary-title {
+        //text-transform: uppercase;
+        font-weight: bold;
+        //line-height: 1.2;
+      }
+      .pp-secondary-title {
+        font-size: 75% !important;
+      }
+    }
+    .pp-sub-heading {
+
+    }
+  }
+}

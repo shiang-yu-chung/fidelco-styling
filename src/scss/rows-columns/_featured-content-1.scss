@@ -1,0 +1,22 @@
+/********* FEATURED CONTENT 1 *********/
+.featured-content-1 {
+  .fl-builder-XXXXXXXXX-edge-layer > * {
+    //inset: auto auto auto auto;
+    //width: 1500px;
+    //height: 1500px;
+  }
+  .media-col {
+    > .fl-col-content {
+      aspect-ratio: 5/3;
+      @media only screen and (min-width: $screen-sm) {
+        min-height: 500px;
+        aspect-ratio: auto;
+      }
+    }
+  }
+  .content-col {
+    > .fl-col-content {
+
+    }
+  }
+}

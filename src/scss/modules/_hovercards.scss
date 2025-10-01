@@ -1,0 +1,33 @@
+/********* HOVERCARDS *********/
+/*** Style 1 ***/
+.hovercards-style-1 {
+  .pp-more-link-container {
+    text-decoration: none !important;
+  }
+  .pp-hover-card, .pp-hover-card-inner, .powerpack-title-image-wrapper {
+    position: relative;
+    transition: var(--transition-brand);
+  }
+  .pp-hover-card {
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: var(--color-black);
+      opacity: 0.4;
+      z-index: 1;
+      transition: var(--transition-brand);
+    }
+    &:hover, &:focus {
+      &:before {
+        opacity: 0;
+      }
+    }
+  }
+  .pp-hover-card-inner {
+    z-index: 2;
+  }
+}

@@ -4,6 +4,7 @@
   "description": "Compile Sass to CSS using NPM",
   "scripts": {
     "sass": "node build-sass.js watch",
+    "build": "node build-sass.js expanded",
     "build:css": "node build-sass.js expanded",
     "build:css:min": "node build-sass.js compressed"
   },
