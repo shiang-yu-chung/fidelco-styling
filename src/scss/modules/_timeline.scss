@@ -1,64 +1,156 @@
 /*****  TIMELINE  *****/
 /*** Style 1 ***/
-#fl-main-content .timeline-style-1 {
-  .pp-timeline .pp-timeline-content-wrapper:before {
-    left: 3%;
-    transform: translateX(-3%);
+#fl-main-content .timeline-style-1 .pp-timeline {
+  // Align Left
+  .pp-timeline-content-wrapper .pp-timeline-item:nth-child(odd) .pp-separator-arrow {
+    @media only screen and (min-width: $screen-sm) {
+      transform: translateY(-50%) rotate(180deg);  
+    }
   }
-  .pp-timeline .pp-timeline-content-wrapper .pp-timeline-item .pp-timeline-icon-wrapper {
-    left: 3%;
-    width: 15%;
-  }
-  
-  
-  .pp-timeline .pp-timeline-content-wrapper {
+  .pp-timeline-content-wrapper {
+    &:before, &:after {
+      display: none;
+    }
+    &:before {
+      //left: 9px;
+      //transform: none;
+    }
+    &:after {
+      // Dot
+      //left: 10px;
+    }
     .pp-timeline-item {
-      @media only screen and (min-width: $screen-sm) {margin-top: -80px;}
-      &:first-child {margin-top: 0;}
-      &:last-child {margin-bottom: 0 !important;}
+      &:before, &:after {
+        content: '';
+        position: absolute;
+        z-index: 0;
+        inset: auto auto auto 9px;
+        height: 50%;
+        width: 3px;
+        background-color: var(--color-primary-7);
+      }
+      &:before {
+        top: 0;
+      }
+      &:after {
+        bottom: 0;
+      }
+      &:first-child:before,
+      &:last-child:after {
+        display: none;
+      }
     }
   }
-  .pp-timeline-content-wrapper:before {
-    opacity: 0.10;
+  .pp-timeline-content-wrapper .pp-timeline-item .pp-timeline-icon-wrapper {
+    width: 85px;
+    inset: 50% auto auto 10px;
+    transform: translate(-50%, -50%);
+    overflow: visible;
+    z-index: 1;
+    @media only screen and (min-width: $screen-sm) {
+      width: 110px;
+      inset: 50% auto auto 10px;
+    }
   }
+  // Icon
   .pp-timeline-content-wrapper .pp-timeline-icon {
-    padding: 10px;
-    border-radius: 100%;
+    padding: 0;
+    background: #fff;
     .pp-icon {
-      font-size: 24px;
+      font-size: 28px;
+      @media only screen and (min-width: $screen-sm) {
+        font-size:33px;
+      }
     }
   }
-  .pp-timeline-item .pp-timeline-icon-wrapper {
-    min-height: 30px;
+  // Arrow
+  .pp-timeline-content-wrapper .pp-timeline-item .pp-separator-arrow {
+    border-right-width: 14px;
+    border-left-width: 14px;
+    border-top-width: 24px;
+    border-bottom-width: 24px;
+    left: auto;
+    right: 0;
   }
-  .pp-timeline-item .pp-separator-arrow {
-    top: calc(50% + 10px);
-  }
-  .pp-timeline-content .pp-timeline-title {
-    font-weight: 800;
-    padding: 15px 20px;
-  }
-  .pp-timeline-item .pp-timeline-content {
-    //padding: 30px;
-    border-radius: 20px;
-    box-shadow: 0px 12px 0 -5px rgba(0, 0, 0, 0.10);
+  // Content
+  .pp-timeline-content-wrapper .pp-timeline-item {
+    margin-bottom: 0;
+    display: flex;
+    justify-content: flex-end;
+    .pp-timeline-content {
+      margin: 0;
+      float: right;
+      width: calc(100% - 50px);
+      @media only screen and (min-width: $screen-sm) {
+        width: calc(100% - 64px);
+      }
+      .pp-timeline-title-wrapper {
+        display: none;
+      }
+      .fl-row-content-wrap {
+        padding: 0 !important;
+      }
+    }
   }
   .pp-timeline-item .pp-timeline-content .pp-timeline-text-wrapper {
-    padding: 30px;
+    padding: 0px;
   }
-  .pp-timeline-item .pp-timeline-button {
-    font-size: 15px;
-    text-transform: uppercase;
-    font-weight: 800;
+}
+/*** Step Content ***/
+html:not(.fl-builder-edit) .step-content,
+html:not(.fl-builder-edit) .step-content .content-col > .fl-col-content {
+  overflow: hidden;
+}
+.step-content {
+  display: flex;
+  > .fl-col-content {
+    padding: 10px !important;
+    background: #fff;
+    border: var(--border-radius-sm) solid ;
+    border-radius: var(--border-radius-lg);
   }
-  @media only screen and (max-width: $screen-sm) {
-    //.pp-timeline-text img {max-width: 180px !important;}
-    .pp-timeline .pp-timeline-content-wrapper .pp-timeline-item .pp-timeline-icon-wrapper {display: none;}
-    .pp-timeline .pp-timeline-content-wrapper .pp-timeline-item {
-      margin-bottom: 20px;
-      .pp-timeline-content {
-        width: 100%;
-        margin: 0;
+  .media-col {
+    > .fl-col-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end !important;
+      align-items: center;
+      gap: 10px;
+      border-radius: var(--border-radius-sm);
+      aspect-ratio: 5/3;
+    }
+  }
+  .content-col {
+    @media only screen and (min-width: $screen-sm) {
+      max-width: 35%;
+    }
+    > .fl-col-content {
+      border-radius: var(--border-radius-md);
+      padding: 5px 0 !important;
+      @media only screen and (min-width: $screen-sm) {
+        padding: 5px 10px !important;
+      }
+    }
+  }
+  .caption {
+    font-size: 14px;
+    text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.35);
+    * {
+      color: #fff !important;
+    }
+  }
+  .step-heading {
+    .heading-title {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      .pp-primary-title {
+        font-size: 36px;
+        line-height: 1.1;
+        flex: 0;
+        @media only screen and (min-width: $screen-sm) {
+          font-size: 56px;
+        }
       }
     }
   }
