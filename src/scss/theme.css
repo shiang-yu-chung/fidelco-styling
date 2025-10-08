@@ -505,8 +505,6 @@ body .wp-caption p.wp-caption-text, .image-caption-style-1 .pp-photo-caption { f
 /*** Step Content ***/
 html:not(.fl-builder-edit) .step-content, html:not(.fl-builder-edit) .step-content .content-col > .fl-col-content { overflow: hidden; }
 
-.step-content { display: flex; }
-
 .step-content > .fl-col-content { padding: 10px !important; background: #fff; border: var(--border-radius-sm) solid; border-radius: var(--border-radius-lg); }
 
 .step-content .media-col > .fl-col-content { display: flex; flex-direction: column; justify-content: flex-end !important; align-items: center; gap: 10px; border-radius: var(--border-radius-sm); aspect-ratio: 5/3; }
