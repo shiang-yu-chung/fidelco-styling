@@ -144,6 +144,12 @@
     }
   }
 }
+/*** Image Sizes ***/
+.content-grid-style-basic.img-portrait {
+  .featured-image-bg {
+    aspect-ratio: 15 / 16;
+  }
+}
 /*** Hide Elements ***/
 .content-grid-style-basic {
   &.hide-image .featured-image-bg,
