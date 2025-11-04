@@ -1,0 +1,47 @@
+/********* CALLOUTs *********/
+/*** Style 1 ***/
+.callout-content-1 {
+  > .fl-col-content {
+    background-size: auto 120%;
+    background-position-y: calc(100% + 20px);
+    position: relative;
+    &:before {
+      content: "";
+      position: absolute;
+      inset: 24px 24px auto auto;
+      background-color: #883634;
+      border: 4px solid #FFFFFF;
+      border-radius: 100%;
+      width: 36px;
+      aspect-ratio: 1/1;
+      @media only screen and (min-width: $screen-sm) {
+        width: 44px;
+        inset: 40px 40px auto auto;
+      }
+    }
+    @media only screen and (max-width: $screen-sm) {
+      background-size: auto 85%;
+      background-position: right top;
+      overflow: hidden;
+    }
+  }
+  .media-col {
+    > .fl-col-content {
+    }
+  }
+  .content-col {
+    > .fl-col-content {
+      
+    }
+    @media only screen and (max-width: $screen-sm) {
+      position: absolute;
+      inset: auto auto 0 0;
+      height: 100%;
+      width: 100% !important;
+      > .fl-col-content {
+        justify-content: flex-end !important;
+        background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 40%, black 100%);
+      }
+    }
+  }
+}
