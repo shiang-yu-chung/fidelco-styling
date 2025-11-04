@@ -47,3 +47,14 @@ hr {
   height: 2px;
   background-color: rgba(0,0,0,0.10);
 }
+/*** MISC ***/
+.social-media-icon-links {
+  .fl-icon {
+    i {
+      box-shadow: var(--shadow-1);
+    }
+    &:hover, &:focus {
+      i {box-shadow: var(--shadow-2);}
+    }
+  }
+}
