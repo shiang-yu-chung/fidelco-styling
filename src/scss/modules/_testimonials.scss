@@ -38,3 +38,101 @@
     //}
 	}
 }
+.testimonials-style-2 {
+	.pp-testimonials-wrap {
+    .pp-testimonials{
+      $quote-size: 168px;
+      $quote-color: var(--color-primary-5a);
+      &::before{
+        content: open-quote;
+        font-family: var(--font-raleway);
+        color: $quote-color;
+        font-size: $quote-size;
+        left: -20px;
+        top: 10px;
+        position: absolute;
+        font-weight: 700;
+        line-height: 100%;
+        z-index:2;
+      }
+      &::after{
+        content: close-quote;
+        font-family: var(--font-raleway);
+        color: $quote-color;
+        font-size: $quote-size;
+        right: -20px;
+        top: 10px;
+        position: absolute;
+        font-weight: 700;
+        line-height: 100%;
+        z-index:2;
+      }
+    }
+    .pp-testimonial.layout-3  {
+      padding: 0;
+      .layout-3-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width:100%;
+      }
+    }
+    $buttonheight: 48px;
+    .owl-nav button{
+      border-radius: 16px;
+      height: $buttonheight;
+      width: $buttonheight;
+      box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.35);
+      z-index: 3;
+      svg{
+        height:calc(($buttonheight * (2/3)));
+      }
+    }
+    .owl-prev{
+      left:calc(($buttonheight/2)/-1);
+    }
+    .owl-next{
+      right:calc(($buttonheight/2)/-1);
+    }
+  }
+	.pp-testimonial {
+		padding: 0;
+		&.layout-3 .pp-content-wrapper {
+      padding: 40px 90px 40px 90px;
+      width: 100%;
+      @media only screen and (max-width: $screen-sm) {
+          padding: 40px 60px 40px 60px;
+      }
+		}
+    .pp-testimonials-image img {
+      aspect-ratio: 1 / 1;
+      @media only screen and (max-width: $screen-sm) {
+        max-height: 120px;
+        max-width: 120px;
+      }
+    }
+    .pp-testimonials-content {
+      text-align: left;
+      //p:before {
+        //content: '\201C';
+        //height: calc(20px + (48 - 20) * ((100vw - 360px) / (1800 - 360)));
+        //float: left;
+        //z-index: 1;
+        //color: rgba(0,0,0,0.35);
+        //font-size: calc(50px + (110 - 50) * ((100vw - 360px) / (1800 - 360)));
+        //line-height: 1;
+        //font-weight: bold;
+        //margin: 0 5px 5px 0;
+        //@media only screen and (max-width: $screen-sm) {margin: 0 10px 5px 0px;}
+      //}
+    }
+    .pp-title-wrapper{
+      .pp-testimonials-name{
+        font-size: 18px;
+        font-family: var(--font-raleway);
+        font-weight: 800;
+      }
+      
+    }
+	}
+}
