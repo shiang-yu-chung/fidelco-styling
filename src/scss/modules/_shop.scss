@@ -1,0 +1,17 @@
+/* Shop Related Styles*/
+
+#shop-header{
+    .pp-heading-wrapper{
+        justify-content:start;
+        @media only screen and (min-width: $screen-sm) {
+            justify-content: end;
+        }
+    }
+}
+.select2-container .select2-selection--single .select2-selection__rendered{
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.search-field{
+    margin-bottom: .5rem;
+}
