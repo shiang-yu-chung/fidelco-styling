@@ -13,6 +13,15 @@
     > .pp-has-submenu-container a {
       margin-bottom: 8px;
     }
+    &.pp-has-submenu{
+      &.focus{
+        > .sub-menu{
+          display: block;
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+    }
   }
   .sub-menu {
     li {
